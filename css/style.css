@@ -1,0 +1,64 @@
+/* Цвета лежат в переменных. Тёмная тема просто меняет их значения */
+:root {
+  --bg1: #2f8f4e;
+  --bg2: #3aa35c;
+  --card: #f4f6ef;
+  --text: #14301f;
+  --line: #14301f;
+}
+
+body.dark {
+  --bg1: #0f2a1a;
+  --bg2: #153a24;
+  --card: #1c2b22;
+  --text: #e8efe9;
+  --line: #6fcf8f;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font: 18px/1.5 Arial, sans-serif;
+  color: var(--text);
+  /* зелёные полосы по 40px */
+  background: repeating-linear-gradient(90deg, var(--bg1) 0 40px, var(--bg2) 40px 80px);
+}
+
+a { color: var(--text); }
+h1, h2 { margin-top: 0; font-size: 36px; }
+h2 { color: #fff; }
+
+/* Шапка и подвал */
+header, footer { padding: 16px 24px; background: #14301f; color: #fff; }
+header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+footer { text-align: center; }
+header a { color: #fff; text-decoration: none; }
+header a:hover { text-decoration: underline; }
+.logo { font-size: 24px; font-weight: bold; }
+.nav a { margin-right: 24px; }
+
+button { padding: 8px 16px; font-size: 16px; cursor: pointer; border: none; background: #f4f6ef; color: #14301f; }
+.menu-btn { display: none; }
+
+/* Разделы и карточки. flex-wrap: если места мало, блоки сами переносятся вниз */
+.section { max-width: 1000px; margin: 0 auto; padding: 64px 24px; }
+.about, .skills, .contact { display: flex; flex-wrap: wrap; gap: 24px; }
+.about { align-items: center; }
+.skills { margin: 0; padding: 0; list-style: none; }
+.card { flex: 1 1 280px; padding: 28px; background: var(--card); border: 3px solid var(--line); }
+.photo { width: 320px; max-width: 100%; height: auto; border: 3px solid var(--line); }
+
+/* Форма */
+label { display: block; margin-top: 12px; font-weight: bold; }
+input, textarea { width: 100%; padding: 10px; font: inherit; color: var(--text); background: var(--card); border: 2px solid var(--line); }
+form button { margin-top: 16px; background: var(--text); color: var(--card); }
+
+/* Телефон: меню прячется, JS показывает его классом open */
+@media (max-width: 700px) {
+  .menu-btn { display: block; }
+  .nav { display: none; width: 100%; }
+  .nav.open { display: block; }
+  .nav a { display: block; margin: 0; padding: 10px 0; }
+}

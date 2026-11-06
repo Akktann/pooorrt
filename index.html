@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Актан — портфолио</title>
+  <link rel="icon" href="images/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <a class="logo" href="#top">Актан</a>
+    <button class="menu-btn" id="menuBtn">Меню</button>
+    <nav class="nav" id="nav">
+      <a href="#about">Обо мне</a>
+      <a href="#skills">Навыки</a>
+      <a href="#contact">Контакты</a>
+      <button id="themeBtn">Тёмная тема</button>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <section class="section about" id="about">
+      <img class="photo" src="images/photo.jpg" alt="Фото Актана">
+      <div class="card">
+        <h1>Привет, я Актан</h1>
+        <p>Студент IT-колледжа.</p>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <h2>Навыки</h2>
+      <ul class="skills">
+        <li class="card">Figma</li>
+        <li class="card">HTML и CSS</li>
+        <li class="card">Общительность</li>
+        <li class="card">Быстро учусь</li>
+        <li class="card">Английский</li>
+      </ul>
+    </section>
+
+    <section class="section" id="contact">
+      <h2>Контакты</h2>
+      <div class="contact">
+        <div class="card">
+          <p><a href="mailto:gavrusamotrrskin@gmail.com">gavrusamotrrskin@gmail.com</a></p>
+          <p><a href="tel:+996706220032">0706220032</a></p>
+          <p><a href="https://www.instagram.com/nigga_realy_black?rpxt=bTk2cjZzenEwZDJ3" target="_blank">Instagram</a></p>
+        </div>
+
+        <!-- required: поле обязательное. action: кнопка открывает письмо на почту -->
+        <form class="card" action="mailto:gavrusamotrrskin@gmail.com" method="post" enctype="text/plain">
+          <label for="name">Имя</label>
+          <input id="name" name="name" required>
+
+          <label for="email">Почта</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="message">Сообщение</label>
+          <textarea id="message" name="message" rows="4" minlength="5" required></textarea>
+
+          <button>Отправить</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 Актан</footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
